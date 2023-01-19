@@ -17,6 +17,7 @@
   --brand-dark: hsl(var(--hue), 100%, 14%);
 
   --bg-light: hsl(180, 14%, 97%);
+  --bg-green: hsl(125, 63%, 37%);
 
   font-size: 62.5%; /* 1rem = 10px */
 
@@ -95,7 +96,7 @@ section .content p {
 }
 
 .button {
-  background: var(--primary-color);
+  background-color: var(--bg-green);
   border: none;
   border-radius: 4rem;
   margin-bottom: 6rem;
@@ -114,7 +115,7 @@ section .content p {
 }
 
 .button:hover {
-  background-color: var(--brand-dark);
+  background-color: var(--primary-color);
 }
 
 .social-links {
