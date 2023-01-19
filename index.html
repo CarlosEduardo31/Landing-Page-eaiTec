@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e.AI Tecnologia</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- COMEÇO MENU -->
+    <nav id="navigation" >
+      <div class="wrapper">
+        <a class="logo" href="#home">LOGO</a>
+
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="#home">Início</a>
+            </li>
+            <li><a onclick="closeMenu()" href="#services">Produtos</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
+          </ul>
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://instagram.com">
+                <img src="./assets/instagram-icon.svg" alt="icone do instagram">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://facebook.com">
+                <img src="./assets/facebook-icon.svg" alt="icone do facebook">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com">
+                <img src="./assets/youtube-icon.svg" alt="icone do youtube">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <!-- FIM MENU -->
+
+    <!-- COMEÇO HOME -->
+    <section id="home">
+      <div class="wrapper">
+        <div class="col-a">
+          <header>
+            <h4>BOAS-VINDAS A E.AÍ TÈCNOLOGIA 👋</h4>
+            <h1>Desinfecção de forma inteligente</h1>
+          </header>
+
+          <div class="content">
+            <p>
+              Já pensou em uma solução que utiliza tecnologia de alta qualidade e altos níveis de eficácia para combater vírus, bactérias e fungos? 
+              Você precisa conhecer nossos robôs! 99,9% de Eficácia na Desinfecção.
+            </p>
+            <a class="button" href="#contact">
+              <img  src="./assets/whatsapp-icon.svg" alt="icone do whatsapp">
+              Fale Conosco
+            </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img
+            src="./assets/png-transparent-robotics-robotics-cartoon-rover-robotics.png"
+            alt="Desenho de um robo"
+          />
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <p>Desinfecção em apenas alguns minutos</p>
+          </div>
+
+          <div class="stat">
+            <p>Não deixa resíduo no ambiente</p>
+          </div>
+
+          <div class="stat">
+            <p>Garante 99,9% de Eficácia na Desinfecção</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIM HOME -->
+
+    <!-- COMEÇO FOOTER -->
+    <footer>
+      <div class="wrapper">
+        <div class="col-a">
+          <a class="logo" href="#home">
+            <img src="https://www.eai.tec.br/assets/img/Logo.png" alt="Logo da empresta e.AÍ Técnologia">
+          </a>
+
+          <p>
+            ©2023 e.AÍ Técnologia. <br />
+            Todos os direitos reservados.
+          </p>
+        </div>
+
+        <div class="col-b">
+          <ul class="social-links">
+            <li>
+              <a target="_blank" href="https://instagram.com">
+                <img src="./assets/instagram-icon.svg" alt="icone do instagram">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://facebook.com">
+                <img src="./assets/facebook-icon.svg" alt="icone do facebook">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://youtube.com">
+                <img src="./assets/youtube-icon.svg" alt="icone do youtube">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- FIM FOOTER -->
+    
+    <!-- ScrollReaveal Lib -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
