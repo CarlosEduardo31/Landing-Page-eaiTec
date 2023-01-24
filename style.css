@@ -331,10 +331,10 @@ button#prev {
 }
 
 .product-container p {
-  color: #8c8c98;
-  text-align: left;
-  font-size: 0.9em;
-  line-height: 2em;
+  color: var(--paragraph);
+  text-align: start;
+  font-size: 1em;
+  line-height: 1.6em;
   letter-spacing: 0.05em;
 }
 
@@ -357,6 +357,22 @@ button#prev {
   display: flex;
   justify-content: center;
   align-items: center;}
+
+
+/*=== ABOUT =================================*/
+#about {
+  text-align: left;
+  background-color: var(--brand-beige);
+}
+
+#about header h2 {
+  margin-bottom: 2.4rem;
+}
+
+#about .content p {
+  margin-top: 2.4rem;
+  margin-bottom: 6rem;
+}
 
 /*=== FOOTER =================================*/
 footer {
@@ -648,11 +664,12 @@ footer .social-links {
   }
   
   .product-container p {
-    color: #8c8c98;
     text-align: left;
-    font-size: 0.9em;
-    line-height: 2em;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
     letter-spacing: 0.05em;
+    color: var(--paragraph);
   }
   
   .product-container .card-img {
@@ -675,7 +692,21 @@ footer .social-links {
     justify-content: center;
     align-items: center;}
 
-  
+  /*=== ABOUT =================================*/
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+  }
+
   /*=== FOOTER =================================*/
   footer {
     padding-block: 8rem;
