@@ -4,7 +4,7 @@ onScroll()
 function onScroll() {
   showNavOnScroll()
 
-}
+};
 
 function showNavOnScroll() {
   if (scrollY > 0) {
@@ -12,15 +12,15 @@ function showNavOnScroll() {
   } else {
     navigation.classList.remove('scroll')
   }
-}
+};
 
 function openMenu() {
   document.body.classList.add('menu-expanded')
-}
+};
 
 function closeMenu() {
   document.body.classList.remove('menu-expanded')
-}
+};
 
 ScrollReveal({
   origin: 'top',
@@ -29,4 +29,63 @@ ScrollReveal({
 }).reveal(`
   #home, 
   #home img, 
-  #home .stats`)
+  #home .stats,
+  #products,
+  #products header,
+  #products .caroussel`);
+  
+// CARROUSSEL
+
+const products = [{
+            name:"PRODUTO 1",
+            image:"https://www.eai.tec.br/assets/img/services/10.png",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisquam ea corporis quidem exercitationem, voluptate odio vero deleniti quo quam, nostrum modi impedit necessitatibus expedita maiores voluptas odit fugit tenetur?"
+
+        },{
+            name:"PRODUTO 2",
+            image:"https://www.eai.tec.br/assets/img/services/11.png",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisquam ea corporis quidem exercitationem, voluptate odio vero deleniti quo quam, nostrum modi impedit necessitatibus expedita maiores voluptas odit fugit tenetur?"
+
+        },{
+            name:"PRODUTO 3",
+            image:"https://www.eai.tec.br/assets/img/services/12.png",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisquam ea corporis quidem exercitationem, voluptate odio vero deleniti quo quam, nostrum modi impedit necessitatibus expedita maiores voluptas odit fugit tenetur?"
+
+        },{
+            name:"PRODUTO 4",
+            image:"https://www.eai.tec.br/assets/img/services/13.png",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quisquam ea corporis quidem exercitationem, voluptate odio vero deleniti quo quam, nostrum modi impedit necessitatibus expedita maiores voluptas odit fugit tenetur?"
+
+        }
+    ];
+
+        let i = 0;
+        let j = products.length;
+
+        let productContainer = document.getElementById("product-container");
+        let nextBtn = document.getElementById("next");
+        let prevBtn = document.getElementById("prev");
+
+        nextBtn.addEventListener("click", () => {
+            i = (j + i + 1) % j;
+            displayTestimonial();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            i = (j + i - 1) % j;
+            displayTestimonial();
+        });
+
+        let displayTestimonial = () => {
+          productContainer.innerHTML = `
+            <div class="card-img">
+                <img src=${products[i].image} />
+            </div>
+            <div class="card-descricao">
+                <h3>${products[i].name}</h3>
+                <p>${products[i].description}</p>
+            </div>
+            `
+        };
+
+        window.onload = displayTestimonial;
