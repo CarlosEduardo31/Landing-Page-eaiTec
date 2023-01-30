@@ -407,6 +407,35 @@ footer .social-links {
   justify-content: center;
 }
 
+/* BUTTON CONTACT */
+#contactButton {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: 200ms;
+}
+
+#contactButton.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  background-color: var(--bg-green);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  height: 40px;
+  width: 200px;
+  visibility: visible;
+  opacity: 1;
+  border-radius: 4rem;
+  transform: translateX(0);
+}
 
 /*=== RESPONSIVO =================================*/
 @media (min-width: 1024px) {
@@ -732,14 +761,6 @@ footer .social-links {
     margin-bottom: 0
   }
 
-}
-
-
-
-@media screen and (max-width: 650px) {
-  .caroussel {
-    font-size: 14px;
-  }
 }
 
 

@@ -1,9 +1,12 @@
 window.addEventListener('scroll', onScroll);
 const navigation = document.getElementById('navigation');
+const contactButton = document.getElementById("contactButton");
+
 onScroll();
 function onScroll() {
   showNavOnScroll();
-
+  showcontactButtonOnScroll();
+  console.log(scrollY)
 };
 
 function showNavOnScroll() {
@@ -13,6 +16,14 @@ function showNavOnScroll() {
     navigation.classList.remove('scroll');
   }
 };
+
+function showcontactButtonOnScroll() {
+  if (scrollY > 550) {
+    contactButton.classList.add('show')
+  } else {
+    contactButton.classList.remove('show')
+  }
+}
 
 function openMenu() {
   document.body.classList.add('menu-expanded');
@@ -28,7 +39,7 @@ ScrollReveal({
   duration: 700
 }).reveal(`
   #home, 
-  #home img, 
+  #home .col-b img, 
   #home .stats,
   #products,
   #products header,
