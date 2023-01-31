@@ -126,7 +126,6 @@ section .content p {
   margin-top: 12rem;
 }
 
-
 /*=== NAVIGATION =================================*/
 nav {
   display: flex;
@@ -387,11 +386,6 @@ footer .logo {
   margin-bottom: 2.4rem;
 }
 
-footer .logo svg {
-  width: 23.6rem;
-  height: 3.1rem;
-}
-
 footer .logo path {
   fill: white;
 }
@@ -399,7 +393,6 @@ footer .logo path {
 footer p {
   color: var(--brand-beige);
   line-height: 2;
-
   margin-bottom: 3.2rem;
 }
 
@@ -751,14 +744,22 @@ footer .social-links {
     align-self: center;
   }
 
+  footer .col-a p {
+    margin-bottom: 0
+  }
 
   footer .col-b {
     align-self: center;
-    justify-self: flex-end;
+    justify-self: center;
+  } 
+
+  footer .col-b .social-links {
+    margin-top: 0;
   }
 
-  footer p {
-    margin-bottom: 0
+  footer .col-b .social-links a img:hover {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
 }
