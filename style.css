@@ -61,7 +61,7 @@ section {
 }
 
 section header h4 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08rem;
@@ -288,7 +288,7 @@ body.menu-expanded button {
   left: 50%;
   top: 50%;
   box-shadow: 0 1.8em 3em rgba(1,17,39,0.15);
-  display: flex;
+  display: none;
 }
 
 .product-container {
@@ -355,7 +355,45 @@ button#prev {
 .produtos {
   display: flex;
   justify-content: center;
-  align-items: center;}
+  align-items: center;
+}
+
+.produtos .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  width: 100%;
+}
+
+.produtos .cards .card {
+  background-color: #fff;
+  box-shadow: 0 1.8em 3em rgba(1,17,39,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 66rem;
+  border-radius: 0.9rem;
+}
+
+.produtos .cards .card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.produtos .cards .card p {
+  font-size: 1.8rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--paragraph);
+  text-align: start;
+  margin: 1.5rem;
+}
 
 
 /*=== ABOUT =================================*/
@@ -704,7 +742,7 @@ footer .social-links {
   
   .product-container h3 {
     color: var(--primary-color);
-    font-size: 1em;
+    font-size: 1.8rem;
     text-align: center;
     margin:0 0 2em 0;
   }		
@@ -712,8 +750,13 @@ footer .social-links {
   .produtos {
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+  }
 
+  .produtos .cards {
+    display: none;
+  }
+  
   /*=== ABOUT =================================*/
   #about .wrapper {
     grid-template-columns: 48rem 1fr;
